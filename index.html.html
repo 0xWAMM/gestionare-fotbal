@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestionare Fotbal</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 20px;
+          padding: 0;
+          background-color: #f4f4f9;
+      }
+      h1 {
+          color: #333;
+      }
+      form {
+          margin-bottom: 20px;
+      }
+      input, button {
+          padding: 10px;
+          margin: 5px 0;
+          width: 100%;
+          box-sizing: border-box;
+      }
+      button {
+          background-color: #007BFF;
+          color: white;
+          border: none;
+          cursor: pointer;
+      }
+      button:hover {
+          background-color: #0056b3;
+      }
+      .list {
+          margin-top: 20px;
+      }
+      .list h2 {
+          color: #007BFF;
+      }
+      ul {
+          list-style-type: none;
+          padding: 0;
+      }
+      li {
+          padding: 5px 0;
+          border-bottom: 1px solid #ddd;
+      }
+  </style>
+</head>
+<body>
+<h1>Gestionare Echipa de Fotbal</h1>
+
+<form id="playerForm">
+  <label for="name">Nume:</label>
+  <input type="text" id="name" placeholder="Introdu numele" required />
+
+  <label for="rating">Rating:</label>
+  <input type="number" id="rating" placeholder="Introdu ratingul (1-10)" min="1" max="10" required />
+
+  <button type="submit">Adaugă jucător</button>
+</form>
+
+<div class="list">
+  <h2>Participanți confirmați (maxim 14):</h2>
+  <ul id="confirmedList"></ul>
+</div>
+
+<div class="list">
+  <h2>Lista de rezervă:</h2>
+  <ul id="waitingList"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
